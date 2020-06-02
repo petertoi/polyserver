@@ -26,7 +26,7 @@ app.get( '/convert', function( req, res, done ) {
 
 	var ip = req.headers[ 'x-forwarded-for' ] || req.connection.remoteAddress;
 
-	var format = req.query.format || req.params.format || req.body.format || 'json';
+	var format = req.query.format || req.params.format || req.body.format || 'svg';
 
 	console.log( 'Got request for "' + v.url + '", cutoff=' + v.cutoff + ', threshold=' + v.threshold + ', format=' + format + ' from ' + ip );
 	v.go( function() {
