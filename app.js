@@ -17,7 +17,7 @@ app.get( '/', function( req, res ) {
 	res.send( { status: 'ok' } );
 } );
 
-app.post( '/convert', function( req, res, done ) {
+app.get( '/convert', function( req, res, done ) {
 	var v = new Vectorizer();
 
 	v.url = req.query.url || req.params.url || req.body.url || '';
